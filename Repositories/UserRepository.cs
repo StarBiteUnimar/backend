@@ -1,4 +1,4 @@
-using rest_rating.Data;
+﻿using rest_rating.Data;
 using rest_rating.Models;
 using Microsoft.EntityFrameworkCore;
 
@@ -22,6 +22,11 @@ public class UserRepository : IUserRepository
     public async Task<User?> GetByIdAsync(Guid id)
     {
         return await _db.Users.FindAsync(id);
+    }
+
+    public async Task<IEnumerable<User>> GetAllAsync() // 👈 novo
+    {
+        return await _db.Users.ToListAsync();
     }
 
     public async Task SaveChangesAsync() => await _db.SaveChangesAsync();

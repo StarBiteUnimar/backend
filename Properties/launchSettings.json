@@ -1,12 +1,13 @@
 {
-  "profiles": {
-    "rest_rating": {
-      "commandName": "Project",
-      "launchBrowser": true,
-      "environmentVariables": {
-        "ASPNETCORE_ENVIRONMENT": "Development"
-      },
-      "applicationUrl": "https://localhost:55042;http://localhost:55043"
+    "profiles": {
+        "rest_rating": {
+            "commandName": "Project",
+            "launchBrowser": true,
+            "launchUrl": "swagger",
+            "applicationUrl": "https://localhost:55042;http://localhost:55043",
+            "environmentVariables": {
+                "ASPNETCORE_ENVIRONMENT": "Development"
+            }
     }
   }
 }
